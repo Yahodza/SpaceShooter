@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Space Impact Game</title>
+    <link rel="manifest" href="manifest.json" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+            color: white;
+            text-align: center;
+        }
+
+        #gameCanvas {
+            display: block;
+            margin: 0 auto;
+            background: #000;
+        }
+
+        .info-container {
+            margin-top: 20px; /* Space between canvas and controls */
+        }
+
+        #controls, #score, #finalScore, #resetButton, #highScore, #leaderboard {
+            font-size: 24px;
+            margin: 10px;
+        }
+
+        #resetButton {
+            display: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div class="info-container">
+        <div id="controls">Controls: A = Left, D = Right, SPACE = Fire</div>
+        <div id="score">Score: 0</div>
+        <div id="finalScore"></div>
+        <div id="highScore">High Score: 0</div>
+        
+        <div id="resetButton" onclick="resetGame()">Reset Game</div>
+    </div>
+    <script src="game.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => {
+              console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch((error) => {
+              console.error('Service Worker registration failed:', error);
+            });
+        });
+      }
+    </script>
+</body>
+</html>

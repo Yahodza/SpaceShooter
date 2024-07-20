@@ -1,0 +1,21 @@
+{
+  "name": "Space Impact Game",
+  "short_name": "Space Impact",
+  "description": "A space-themed shooting game with intense action and fun gameplay.",
+  "start_url": "/index.html/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "images/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
