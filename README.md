@@ -1,7 +1,7 @@
 # SpaceShooter
 Web game (PWA)/pHp/sql
 
-"Space Shooter"
+"Space Shooter"<br>
 step1.extract the file<br>
 step 2. import database name "space_impact"<br>
 step 3. open xammp<br>
